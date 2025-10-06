@@ -105,12 +105,20 @@ useEffect(() => {
 
   return <div
     style={{
-      maxWidth: "800px",
+      // maxWidth: "800px",
+      // display: "flex",
+      // flexDirection: "column",
+      // gap: "2rem", //space between each item is 2rem
+      // margin: "0 auto",
+      // alignItems: "center"
+      width: "min(90vw, 800px)", // scales width
       display: "flex",
       flexDirection: "column",
-      gap: "2rem", //space between each item is 2rem
+      gap: "1.5rem",
       margin: "0 auto",
-      alignItems: "center"
+      alignItems: "center",
+      padding: "1rem",
+      textAlign: "center",
     }}>
 
     {/* section for winning or losing */}

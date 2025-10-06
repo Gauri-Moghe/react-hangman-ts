@@ -13,7 +13,7 @@ export function  HangmanWord( {reveal = false, guessedLetters, wordToGuess} :
     return <div style = {{
         display: "flex",
         gap: "0.25em",
-        fontSize: "6rem",
+        fontSize: "clamp(2rem, 8vw, 6rem)",
         fontWeight: "bold",
         textTransform: "uppercase",
         fontFamily: "monospace",

@@ -41,8 +41,9 @@ export function Keyboard( {disabled = false, activeLetters, inactiveLetters, add
     return <div 
         style = {{
             display: "grid", 
-            gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr))",
-            gap: ".5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(70px, 1fr))",
+            gap: ".4rem",
+            
         }}
     >
         {KEYS.map(key => {
