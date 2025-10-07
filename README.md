@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# React Hangman
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive word guessing game built with React and TypeScript. The application features smooth animations, a clean interface, and dynamic visual feedback on game outcomes.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React Hangman is a browser-based implementation of the classic Hangman game. Players can guess a randomly selected word one letter at a time before the hangman figure is fully drawn. The project demonstrates component-based architecture, TypeScript type safety, and dynamic UI updates through React state management.
 
-## Expanding the ESLint configuration
+The game runs entirely on the frontend, no backend or external database is required.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Responsive and mobile-friendly interface  
+- Animated transitions for win and loss states  
+- Real-time keyboard input and validation  
+- Modular, reusable React components  
+- Built with modern frontend tooling (React, TypeScript, Vite)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Folder Structure
+```
+react-hangman-ts/
+├── public/
+├── src/
+│ ├── HangmanDrawing.tsx 
+│ ├── HangmanWord.tsx 
+│ ├── Keyboard.tsx 
+│ ├── Keyboard.module.css
+│ ├── global.css
+│ ├── App.tsx 
+│ ├── main.tsx 
+│ └── wordList.json 
+├── package.json
+├── vite.config.ts
+└── README.md
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+## Demo
+
+Try it here:
+[https://gauri-moghe.github.io/react-hangman-ts/](https://gauri-moghe.github.io/react-hangman-ts/)
+
+## Technologies Used
+
+- **React (Vite)**  
+- **TypeScript** 
+- **CSS Modules & Keyframes** 
+- **React Hooks** 
+- **GitHub Pages**
+
+## Setup & Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/Gauri-Moghe/react-hangman-ts.git
+cd react-hangman-ts
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Start the development server:
+```bash
+npm run dev
 ```
+
+## Author
+
+**Gauri Shashank Moghe**  
+🔗 [LinkedIn](https://www.linkedin.com/in/gauri-moghe) 
