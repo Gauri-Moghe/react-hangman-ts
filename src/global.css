@@ -1,0 +1,51 @@
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #FFD6A5 0%, #FFD3CB 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  font-family: "Poppins", "Segoe UI", "Roboto", sans-serif;
+  color: #1a1a1a;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
+}
+
+.lose {
+  animation: shake 0.6s ease-in-out;
+  color: #d62828; /* soft warm red for losing the game */
+}
+
+@keyframes pop {
+  0% { transform: scale(1); color: #000; }
+  40% { transform: scale(1.3); color: #ffb703; }
+  70% { transform: scale(1.3); color: #ffb703; }
+  100% { transform: scale(1); color: #000; }
+}
+
+.win {
+  animation: pop 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
